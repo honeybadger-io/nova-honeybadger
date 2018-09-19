@@ -15,10 +15,10 @@ composer require honeybadger-io/honeybadger-laravel-nova
 Next, define your Honeybadger Project ID and API token inside your `config/services.php` file, like this:
 
 ```php
-    'honeybadger' => [
-        'token' => env('HONEYBADGER_API_TOKEN'),
-        'project_id' => env('HONEYBADGER_PROJECT')
-    ]
+'honeybadger' => [
+    'token' => env('HONEYBADGER_API_TOKEN'),
+    'project_id' => env('HONEYBADGER_PROJECT')
+]
 ```
 
 ## Usage
