@@ -1,0 +1,48 @@
+{
+    "name": "honeybadger-io/nova-honeybadger",
+    "description": "Show Honeybadger errors within Laravel Nova.",
+    "keywords": [
+        "laravel",
+        "honeybadger",
+        "nova"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1.0",
+        "laravel/nova": "*",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "^3.6",
+        "phpunit/phpunit": "7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "HoneybadgerIo\\NovaHoneybadger\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "HoneybadgerIo\\NovaHoneybadger\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "HoneybadgerIo\\NovaHoneybadger\\ToolServiceProvider"
+            ]
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../vendor/laravel/nova"
+        }
+    ],
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
