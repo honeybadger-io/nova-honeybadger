@@ -9,7 +9,7 @@ Display the occured Honeybadger faults along with your Laravel Nova resources.
 You can install the package in to a Laravel app that uses [Nova](https://nova.laravel.com) via composer:
 
 ```bash
-composer require honeybadger-io/honeybadger-laravel-nova
+composer require honeybadger-io/nova-honeybadger
 ```
 
 Next, define your Honeybadger Project ID and API token inside your `config/services.php` file, like this:
