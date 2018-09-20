@@ -1,6 +1,6 @@
 # Honeybadger Tool For Laravel Nova
 
-Display the occured Honeybadger faults along with your Laravel Nova resources.  
+Display the occured Honeybadger faults along with your Laravel Nova resources.
 
 ![screenshot](https://beyondco.de/github/honeybadger/screenshot.png)
 
@@ -34,20 +34,20 @@ public function fields(Request $request)
 {
     return [
         ID::make()->sortable(),
-        
+
         // Your other fields
-    
+
         new \HoneybadgerIo\NovaHoneybadger\Honeybadger,
-        
+
     ];
 }
-``` 
+```
 
 This will automatically search Honeybadger for faults with the resource's User ID.
 
 ### Defining Custom Context Using Resource Attributes
 
-If you want to search for a different context key/value pair, you can create the resource tool using the `fromContextKeyAndAttribute` method. 
+If you want to search for a different context key/value pair, you can create the resource tool using the `fromContextKeyAndAttribute` method.
 This will tell Honeybadger to search for a specific context attribute and use the resource's column as the value.
 
 For example, let's filter our Honeybadger faults by using the resource's email attribute:
@@ -57,11 +57,11 @@ public function fields(Request $request)
 {
     return [
         ID::make()->sortable(),
-        
+
         // Your other fields
-    
+
         \HoneybadgerIo\NovaHoneybadger\Honeybadger::fromContextKeyAndAttribute('context.user.email', 'email'),
-        
+
     ];
 }
 ```
@@ -69,18 +69,18 @@ public function fields(Request $request)
 ### Defining Custom Context
 
 To search your Honeybadger faults using a custom context key and a static value, you may use the `fromContextKeyAndValue` method.
-It works similar to `withContextKeyAndAttribute`, but will use the second parameter as a static string, instead of looking it up as a resource attribute. 
+It works similar to `withContextKeyAndAttribute`, but will use the second parameter as a static string, instead of looking it up as a resource attribute.
 
 ```php
 public function fields(Request $request)
 {
     return [
         ID::make()->sortable(),
-        
+
         // Your other fields
-    
+
         \HoneybadgerIo\NovaHoneybadger\Honeybadger::fromContextKeyAndAttribute('context.user.email', 'static.value@honeybadger.io'),
-        
+
     ];
 }
 ```
@@ -94,11 +94,11 @@ public function fields(Request $request)
 {
     return [
         ID::make()->sortable(),
-        
+
         // Your other fields
-    
+
         \HoneybadgerIo\NovaHoneybadger\Honeybadger::fromSearchString('-tag:wip -tag:pending environment:"production"'),
-        
+
     ];
 }
 ```
@@ -110,11 +110,11 @@ public function fields(Request $request)
 {
     return [
         ID::make()->sortable(),
-        
+
         // Your other fields
-    
+
         (new \HoneybadgerIo\NovaHoneybadger\Honeybadger)->withSearchString('-environment:"production"'),
-        
+
     ];
 }
 ```
