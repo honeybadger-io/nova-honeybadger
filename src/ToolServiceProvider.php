@@ -54,7 +54,7 @@ class ToolServiceProvider extends ServiceProvider
             $client = new Client([
                 'base_uri' => Api::API_URL,
                 'verify' => false,
-                'auth' => [config('services.honeybadger.token'), '']
+                'auth' => [config('services.honeybadger.api_key'), '']
             ]);
 
             return new Api($client);

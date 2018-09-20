@@ -12,11 +12,11 @@ You can install the package in to a Laravel app that uses [Nova](https://nova.la
 composer require honeybadger-io/nova-honeybadger
 ```
 
-Next, define your Honeybadger Project ID and API token inside your `config/services.php` file, like this:
+Next, define your Honeybadger Project ID and API key inside your `config/services.php` file, like this:
 
 ```php
 'honeybadger' => [
-    'token' => env('HONEYBADGER_API_TOKEN'),
+    'api_key' => env('HONEYBADGER_API_KEY'),
     'project_id' => env('HONEYBADGER_PROJECT')
 ]
 ```
