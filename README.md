@@ -119,7 +119,7 @@ public function fields(Request $request)
 }
 ```
 
-### Testing
+## Testing
 
 ``` bash
 composer test
