@@ -1,8 +1,10 @@
-# Honeybadger Tool For Laravel Nova
+# Honeybadger Tool for Laravel Nova
 
-Display the occured Honeybadger faults along with your Laravel Nova resources.
+This package displays [Honeybadger](https://www.honeybadger.io/for/laravel/?utm_source=github&utm_medium=readme&utm_campaign=laravel&utm_content=Honeybadger) errors for resources in Laravel Nova. By default, it shows all of the exceptions each user has encountered in your Laravel app.
 
 ![screenshot](https://beyondco.de/github/honeybadger/screenshot.png)
+
+With [custom context](#defining-custom-context-using-resource-attributes) and [search strings](#custom-search-string), you can display errors for any resource.
 
 ## Installation
 
