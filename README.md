@@ -14,14 +14,20 @@ You can install the package in to a Laravel app that uses [Nova](https://nova.la
 composer require honeybadger-io/nova-honeybadger
 ```
 
-Next, define your Honeybadger Project ID and API key inside your `config/services.php` file, like this:
+Next, define your Honeybadger Project ID and [Authentication Token](https://docs.honeybadger.io/api/data.html) inside your `config/services.php` file, like this:
 
 ```php
 'honeybadger' => [
-    'api_key' => env('HONEYBADGER_API_KEY'),
-    'project_id' => env('HONEYBADGER_PROJECT')
+    'auth_token' => env('HONEYBADGER_AUTH_TOKEN'),
+    'project_id' => env('HONEYBADGER_PROJECT_ID')
 ]
 ```
+
+You can get your Project ID from the URL of your Honeybadger project:
+
+https://app.honeybadger.io/projects/[ID]/faults
+
+Your Authentication Token is available on [your Honeybadger profile page](https://app.honeybadger.io/users/edit) (Note: this is different from your project's API key).
 
 ## Usage
 
