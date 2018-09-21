@@ -53,6 +53,8 @@ public function fields(Request $request)
 
 This will automatically search Honeybadger for faults with the resource's User ID.
 
+**Note:** Make sure you also [configure Honeybadger to identify users in Laravel](https://docs.honeybadger.io/lib/php/integration/laravel.html#identifying-users).
+
 ### Defining Custom Context Using Resource Attributes
 
 If you want to search for a different context key/value pair, you can create the resource tool using the `fromContextKeyAndAttribute` method.
