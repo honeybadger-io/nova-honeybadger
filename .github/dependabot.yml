@@ -7,6 +7,9 @@ updates:
     time: "09:00"
     timezone: America/Los_Angeles
   open-pull-requests-limit: 99
+  versioning-strategy: increase
+  ignore:
+  - dependency-type: "development"
 - package-ecosystem: composer
   directory: "/"
   schedule:
