@@ -8,8 +8,8 @@ updates:
     timezone: America/Los_Angeles
   open-pull-requests-limit: 99
   versioning-strategy: increase
-  ignore:
-  - dependency-type: "development"
+  allow:
+  - dependency-type: "production"
 - package-ecosystem: composer
   directory: "/"
   schedule:
@@ -17,5 +17,7 @@ updates:
     time: "09:00"
     timezone: America/Los_Angeles
   open-pull-requests-limit: 99
+  allow:
+  - dependency-type: "production"
   ignore:
-    - dependency-name: "nova"
+  - dependency-name: "nova"
